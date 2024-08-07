@@ -1,0 +1,54 @@
+package org.newdawn.slick.opengl;
+
+import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.opengl.renderer.Renderer;
+
+public abstract class SlickCallable {
+   // $FF: synthetic field
+   private static Texture lastUsed;
+   // $FF: synthetic field
+   private static boolean inSafe = false;
+
+   public static void enterSafeBlock() {
+      if (!inSafe) {
+         Renderer.get().flush();
+         lastUsed = TextureImpl.getLastBind();
+         TextureImpl.bindNone();
+         GL11.glPushAttrib(1048575);
+         GL11.glPushClientAttrib(-1);
+         GL11.glMatrixMode(5888);
+         GL11.glPushMatrix();
+         GL11.glMatrixMode(5889);
+         GL11.glPushMatrix();
+         GL11.glMatrixMode(5888);
+         inSafe = true;
+      }
+   }
+
+   protected abstract void performGLOperations() throws SlickException;
+
+   public static void leaveSafeBlock() {
+      if (inSafe) {
+         GL11.glMatrixMode(5889);
+         GL11.glPopMatrix();
+         GL11.glMatrixMode(5888);
+         GL11.glPopMatrix();
+         GL11.glPopClientAttrib();
+         GL11.glPopAttrib();
+         if (lastUsed != null) {
+            lastUsed.bind();
+         } else {
+            TextureImpl.bindNone();
+         }
+
+         inSafe = false;
+      }
+   }
+
+   public final void call() throws SlickException {
+      enterSafeBlock();
+      this.performGLOperations();
+      leaveSafeBlock();
+   }
+}

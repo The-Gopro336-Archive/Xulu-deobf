@@ -1,0 +1,583 @@
+{
+  "mappings": {
+    "com/elementars/eclient/mixin/mixins/MixinRenderEntityItem": {
+      "doRender": "Lnet/minecraft/client/renderer/entity/RenderEntityItem;func_76986_a(Lnet/minecraft/entity/item/EntityItem;DDDFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinEntity": {
+      "applyEntityCollision": "Lnet/minecraft/entity/Entity;func_70108_f(Lnet/minecraft/entity/Entity;)V",
+      "Lnet/minecraft/entity/Entity;addVelocity(DDD)V": "Lnet/minecraft/entity/Entity;func_70024_g(DDD)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlockLiquid": {
+      "getCollisionBoundingBox": "Lnet/minecraft/block/BlockLiquid;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;",
+      "modifyAcceleration": "Lnet/minecraft/block/BlockLiquid;func_176197_a(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/Vec3d;",
+      "canCollideCheck": "Lnet/minecraft/block/BlockLiquid;func_176209_a(Lnet/minecraft/block/state/IBlockState;Z)Z"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlockFire": {
+      "getCollisionBoundingBox": "Lnet/minecraft/block/BlockFire;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinGuiPlayerTabOverlay": {
+      "renderPlayerlist": "Lnet/minecraft/client/gui/GuiPlayerTabOverlay;func_175249_a(ILnet/minecraft/scoreboard/Scoreboard;Lnet/minecraft/scoreboard/ScoreObjective;)V",
+      "getPlayerName": "Lnet/minecraft/client/gui/GuiPlayerTabOverlay;func_175243_a(Lnet/minecraft/client/network/NetworkPlayerInfo;)Ljava/lang/String;"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinEntityThrowable": {
+      "shoot(Lnet/minecraft/entity/Entity;FFFFF)V": "Lnet/minecraft/entity/projectile/EntityThrowable;func_184538_a(Lnet/minecraft/entity/Entity;FFFFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinRenderer": {
+      "Lnet/minecraft/client/renderer/entity/Render;renderOutlines:Z": "Lnet/minecraft/client/renderer/entity/Render;field_188301_f:Z",
+      "doRender": "Lnet/minecraft/client/renderer/entity/Render;func_76986_a(Lnet/minecraft/entity/Entity;DDDFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlockCactus": {
+      "getCollisionBoundingBox": "Lnet/minecraft/block/BlockCactus;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinFontRenderer": {
+      "Lnet/minecraft/client/gui/FontRenderer;renderString(Ljava/lang/String;FFIZ)I": "Lnet/minecraft/client/gui/FontRenderer;func_180455_b(Ljava/lang/String;FFIZ)I",
+      "Lnet/minecraft/client/gui/FontRenderer;drawString(Ljava/lang/String;FFIZ)I": "Lnet/minecraft/client/gui/FontRenderer;func_175065_a(Ljava/lang/String;FFIZ)I",
+      "drawString(Ljava/lang/String;FFIZ)I": "Lnet/minecraft/client/gui/FontRenderer;func_175065_a(Ljava/lang/String;FFIZ)I",
+      "drawStringWithShadow": "Lnet/minecraft/client/gui/FontRenderer;func_175063_a(Ljava/lang/String;FFI)I"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinLayerArmorBase": {
+      "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179131_c(FFFF)V",
+      "renderEnchantedGlint": "Lnet/minecraft/client/renderer/entity/layers/LayerArmorBase;func_188364_a(Lnet/minecraft/client/renderer/entity/RenderLivingBase;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/client/model/ModelBase;FFFFFFF)V",
+      "renderArmorLayer": "Lnet/minecraft/client/renderer/entity/layers/LayerArmorBase;func_188361_a(Lnet/minecraft/entity/EntityLivingBase;FFFFFFFLnet/minecraft/inventory/EntityEquipmentSlot;)V",
+      "net/minecraft/client/renderer/GlStateManager.color(FFFF)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179131_c(FFFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinAbstractClientPlayer": {
+      "getLocationCape": "Lnet/minecraft/client/entity/AbstractClientPlayer;func_110303_q()Lnet/minecraft/util/ResourceLocation;"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlockPortal": {
+      "randomDisplayTick": "Lnet/minecraft/block/BlockPortal;func_180655_c(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V",
+      "Lnet/minecraft/world/World;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/world/World;func_184134_a(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinItemPotion": {
+      "onItemUseFinish": "Lnet/minecraft/item/ItemPotion;func_77654_b(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinRenderGlobal": {
+      "broadcastSound": "Lnet/minecraft/client/renderer/RenderGlobal;func_180440_a(ILnet/minecraft/util/math/BlockPos;I)V",
+      "renderEntities": "Lnet/minecraft/client/renderer/RenderGlobal;func_180446_a(Lnet/minecraft/entity/Entity;Lnet/minecraft/client/renderer/culling/ICamera;F)V",
+      "Lnet/minecraft/client/renderer/RenderGlobal;preRenderDamagedBlocks()V": "Lnet/minecraft/client/renderer/RenderGlobal;func_180443_s()V",
+      "Lnet/minecraft/client/multiplayer/WorldClient;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/client/multiplayer/WorldClient;func_184134_a(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V",
+      "Lnet/minecraft/client/multiplayer/WorldClient;playSound(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/client/multiplayer/WorldClient;func_184156_a(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V",
+      "playEvent": "Lnet/minecraft/client/renderer/RenderGlobal;func_180439_a(Lnet/minecraft/entity/player/EntityPlayer;ILnet/minecraft/util/math/BlockPos;I)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinGuiNewChat": {
+      "drawChat": "Lnet/minecraft/client/gui/GuiNewChat;func_146230_a(I)V",
+      "Lnet/minecraft/client/gui/GuiNewChat;drawRect(IIIII)V": "Lnet/minecraft/client/gui/GuiNewChat;func_73734_a(IIIII)V",
+      "Lnet/minecraft/client/gui/FontRenderer;drawStringWithShadow(Ljava/lang/String;FFI)I": "Lnet/minecraft/client/gui/FontRenderer;func_175063_a(Ljava/lang/String;FFI)I"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinPlayerControllerMP": {
+      "clickBlock": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_180511_b(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;)Z",
+      "resetBlockRemoving": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_78767_c()V",
+      "onPlayerDamageBlock": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_180512_c(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;)Z",
+      "Lnet/minecraft/block/state/IBlockState;getPlayerRelativeBlockHardness(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)F": "Lnet/minecraft/block/state/IBlockState;func_185903_a(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)F"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinRenderLivingBase": {
+      "Lnet/minecraft/client/model/ModelBase;render(Lnet/minecraft/entity/Entity;FFFFFF)V": "Lnet/minecraft/client/model/ModelBase;func_78088_a(Lnet/minecraft/entity/Entity;FFFFFF)V",
+      "renderLayers": "Lnet/minecraft/client/renderer/entity/RenderLivingBase;func_177093_a(Lnet/minecraft/entity/EntityLivingBase;FFFFFFF)V",
+      "renderModel": "Lnet/minecraft/client/renderer/entity/RenderLivingBase;func_77036_a(Lnet/minecraft/entity/EntityLivingBase;FFFFFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinNetHandlerPlayClient": {
+      "Lnet/minecraft/client/multiplayer/WorldClient;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/client/multiplayer/WorldClient;func_184134_a(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V",
+      "handleChunkData": "Lnet/minecraft/client/network/NetHandlerPlayClient;func_147263_a(Lnet/minecraft/network/play/server/SPacketChunkData;)V",
+      "Lnet/minecraft/world/chunk/Chunk;read(Lnet/minecraft/network/PacketBuffer;IZ)V": "Lnet/minecraft/world/chunk/Chunk;func_186033_a(Lnet/minecraft/network/PacketBuffer;IZ)V",
+      "handleEntityStatus": "Lnet/minecraft/client/network/NetHandlerPlayClient;func_147236_a(Lnet/minecraft/network/play/server/SPacketEntityStatus;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlock": {
+      "isFullCube": "Lnet/minecraft/block/Block;func_149686_d(Lnet/minecraft/block/state/IBlockState;)Z",
+      "isOpaqueCube": "Lnet/minecraft/block/Block;func_149662_c(Lnet/minecraft/block/state/IBlockState;)Z",
+      "shouldSideBeRendered": "Lnet/minecraft/block/Block;func_176225_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;)Z"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinModelRenderer": {
+      "Lnet/minecraft/client/renderer/GlStateManager;callList(I)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179148_o(I)V",
+      "render": "Lnet/minecraft/client/model/ModelRenderer;func_78785_a(F)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinRenderPlayer": {
+      "renderRightArm": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_177138_b(Lnet/minecraft/client/entity/AbstractClientPlayer;)V",
+      "Lnet/minecraft/client/model/ModelRenderer;render(F)V": "Lnet/minecraft/client/model/ModelRenderer;func_78785_a(F)V",
+      "renderEntityName": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_188296_a(Lnet/minecraft/client/entity/AbstractClientPlayer;DDDLjava/lang/String;D)V",
+      "renderLeftArm": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_177139_c(Lnet/minecraft/client/entity/AbstractClientPlayer;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinRenderEnderCrystal": {
+      "Lnet/minecraft/client/model/ModelBase;render(Lnet/minecraft/entity/Entity;FFFFFF)V": "Lnet/minecraft/client/model/ModelBase;func_78088_a(Lnet/minecraft/entity/Entity;FFFFFF)V",
+      "doRender(Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V": "Lnet/minecraft/client/renderer/entity/RenderEnderCrystal;func_76986_a(Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinEntityPlayerSP": {
+      "move": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70091_d(Lnet/minecraft/entity/MoverType;DDD)V",
+      "onLivingUpdate": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70636_d()V",
+      "notifyDataManagerChange": "Lnet/minecraft/client/entity/EntityPlayerSP;func_184206_a(Lnet/minecraft/network/datasync/DataParameter;)V",
+      "Lnet/minecraft/client/entity/EntityPlayerSP;closeScreen()V": "Lnet/minecraft/client/entity/EntityPlayerSP;func_71053_j()V",
+      "onUpdateWalkingPlayer": "Lnet/minecraft/client/entity/EntityPlayerSP;func_175161_p()V",
+      "swingArm": "Lnet/minecraft/client/entity/EntityPlayerSP;func_184609_a(Lnet/minecraft/util/EnumHand;)V",
+      "onUpdate": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70071_h_()V",
+      "Lnet/minecraft/client/audio/SoundHandler;playSound(Lnet/minecraft/client/audio/ISound;)V": "Lnet/minecraft/client/audio/SoundHandler;func_147682_a(Lnet/minecraft/client/audio/ISound;)V",
+      "Lnet/minecraft/client/Minecraft;displayGuiScreen(Lnet/minecraft/client/gui/GuiScreen;)V": "Lnet/minecraft/client/Minecraft;func_147108_a(Lnet/minecraft/client/gui/GuiScreen;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlockSoulSand": {
+      "onEntityCollision": "Lnet/minecraft/block/BlockSoulSand;func_180634_a(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/Entity;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinItemEnderPearl": {
+      "onItemRightClick": "Lnet/minecraft/item/ItemEnderPearl;func_77659_a(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinRenderLiving": {
+      "doRender": "Lnet/minecraft/client/renderer/entity/RenderLiving;func_76986_a(Lnet/minecraft/entity/EntityLiving;DDDFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinRenderItem": {
+      "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179131_c(FFFF)V",
+      "net/minecraft/client/renderer/RenderItem.renderModel(Lnet/minecraft/client/renderer/block/model/IBakedModel;I)V": "Lnet/minecraft/client/renderer/RenderItem;func_191965_a(Lnet/minecraft/client/renderer/block/model/IBakedModel;I)V",
+      "Lnet/minecraft/client/renderer/RenderItem;renderModel(Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/item/ItemStack;)V": "Lnet/minecraft/client/renderer/RenderItem;func_191961_a(Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/item/ItemStack;)V",
+      "renderItemModel": "Lnet/minecraft/client/renderer/RenderItem;func_184394_a(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms$TransformType;Z)V",
+      "Lnet/minecraft/client/renderer/RenderItem;renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V": "Lnet/minecraft/client/renderer/RenderItem;func_180454_a(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V",
+      "renderEffect": "Lnet/minecraft/client/renderer/RenderItem;func_191966_a(Lnet/minecraft/client/renderer/block/model/IBakedModel;)V",
+      "renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V": "Lnet/minecraft/client/renderer/RenderItem;func_180454_a(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinModelPlayer": {
+      "setRotationAngles": "Lnet/minecraft/client/model/ModelPlayer;func_78087_a(FFFFFFLnet/minecraft/entity/Entity;)V",
+      "render": "Lnet/minecraft/client/model/ModelPlayer;func_78088_a(Lnet/minecraft/entity/Entity;FFFFFF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinMinecraft": {
+      "sendClickBlockToController": "Lnet/minecraft/client/Minecraft;func_147115_a(Z)V",
+      "Lnet/minecraft/client/Minecraft;displayCrashReport(Lnet/minecraft/crash/CrashReport;)V": "Lnet/minecraft/client/Minecraft;func_71377_b(Lnet/minecraft/crash/CrashReport;)V",
+      "getLimitFramerate": "Lnet/minecraft/client/Minecraft;func_90020_K()I",
+      "runTickKeyboard": "Lnet/minecraft/client/Minecraft;func_184118_az()V",
+      "middleClickMouse": "Lnet/minecraft/client/Minecraft;func_147112_ai()V",
+      "Lnet/minecraft/client/multiplayer/PlayerControllerMP;getIsHittingBlock()Z": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_181040_m()Z",
+      "run": "Lnet/minecraft/client/Minecraft;func_99999_d()V",
+      "shutdownMinecraftApplet": "Lnet/minecraft/client/Minecraft;func_71405_e()V",
+      "rightClickMouse": "Lnet/minecraft/client/Minecraft;func_147121_ag()V",
+      "Lnet/minecraft/client/entity/EntityPlayerSP;isHandActive()Z": "Lnet/minecraft/client/entity/EntityPlayerSP;func_184587_cr()Z"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinGuiChat": {
+      "Lnet/minecraft/client/gui/GuiChat;keyTyped(CI)V": "Lnet/minecraft/client/gui/GuiChat;func_73869_a(CI)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinGuiIngame": {
+      "renderPotionEffects": "Lnet/minecraft/client/gui/GuiIngame;func_184048_a(Lnet/minecraft/client/gui/ScaledResolution;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinGuiMainMenu": {
+      "actionPerformed": "Lnet/minecraft/client/gui/GuiMainMenu;func_146284_a(Lnet/minecraft/client/gui/GuiButton;)V",
+      "Lnet/minecraft/client/gui/GuiMainMenu;renderSkybox(IIF)V": "Lnet/minecraft/client/gui/GuiMainMenu;func_73971_c(IIF)V",
+      "initGui": "Lnet/minecraft/client/gui/GuiMainMenu;func_73866_w_()V",
+      "drawScreen": "Lnet/minecraft/client/gui/GuiMainMenu;func_73863_a(IIF)V",
+      "Lnet/minecraft/client/gui/GuiMainMenu;drawGradientRect(IIIIII)V": "Lnet/minecraft/client/gui/GuiMainMenu;func_73733_a(IIIIII)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinStateImplementation": {
+      "addCollisionBoxToList": "Lnet/minecraft/block/state/BlockStateContainer$StateImplementation;func_185908_a(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;Z)V",
+      "Lnet/minecraft/block/Block;addCollisionBoxToList(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;Z)V": "Lnet/minecraft/block/Block;func_185477_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;Z)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlockModelRenderer": {
+      "renderModel(Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/renderer/BufferBuilder;ZJ)Z": "Lnet/minecraft/client/renderer/BlockModelRenderer;func_187493_a(Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/renderer/BufferBuilder;ZJ)Z"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinTileEntityRenderDispatcher": {
+      "render(Lnet/minecraft/tileentity/TileEntity;DDDFIF)V": "Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;func_192854_a(Lnet/minecraft/tileentity/TileEntity;DDDFIF)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinContainerPlayer": {
+      "onContainerClosed": "Lnet/minecraft/inventory/ContainerPlayer;func_75134_a(Lnet/minecraft/entity/player/EntityPlayer;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinNetworkManager": {
+      "sendPacket(Lnet/minecraft/network/Packet;)V": "Lnet/minecraft/network/NetworkManager;func_179290_a(Lnet/minecraft/network/Packet;)V",
+      "channelRead0": "Lnet/minecraft/network/NetworkManager;channelRead0(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinEntityRenderer": {
+      "hurtCameraEffect": "Lnet/minecraft/client/renderer/EntityRenderer;func_78482_e(F)V",
+      "Lnet/minecraft/client/multiplayer/WorldClient;getEntitiesInAABBexcluding(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Lcom/google/common/base/Predicate;)Ljava/util/List;": "Lnet/minecraft/client/multiplayer/WorldClient;func_175674_a(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Lcom/google/common/base/Predicate;)Ljava/util/List;",
+      "Lnet/minecraft/client/multiplayer/WorldClient;rayTraceBlocks(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/RayTraceResult;": "Lnet/minecraft/client/multiplayer/WorldClient;func_72933_a(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/RayTraceResult;",
+      "orientCamera": "Lnet/minecraft/client/renderer/EntityRenderer;func_78467_g(F)V",
+      "getMouseOver": "Lnet/minecraft/client/renderer/EntityRenderer;func_78473_a(F)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinBlockWeb": {
+      "getCollisionBoundingBox": "Lnet/minecraft/block/BlockWeb;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinGuiScreen": {
+      "renderToolTip": "Lnet/minecraft/client/gui/GuiScreen;func_146285_a(Lnet/minecraft/item/ItemStack;II)V"
+    },
+    "com/elementars/eclient/mixin/mixins/MixinC00Handshake": {
+      "writePacketData": "Lnet/minecraft/network/handshake/client/C00Handshake;func_148840_b(Lnet/minecraft/network/PacketBuffer;)V"
+    }
+  },
+  "data": {
+    "notch": {
+      "com/elementars/eclient/mixin/mixins/MixinRenderEntityItem": {
+        "doRender": "Lbzu;a(Lacl;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntity": {
+        "applyEntityCollision": "Lvg;i(Lvg;)V",
+        "Lnet/minecraft/entity/Entity;addVelocity(DDD)V": "Lvg;f(DDD)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockLiquid": {
+        "getCollisionBoundingBox": "Laru;a(Lawt;Lamy;Let;)Lbhb;",
+        "modifyAcceleration": "Laru;a(Lamu;Let;Lvg;Lbhe;)Lbhe;",
+        "canCollideCheck": "Laru;a(Lawt;Z)Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockFire": {
+        "getCollisionBoundingBox": "Laqq;a(Lawt;Lamy;Let;)Lbhb;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiPlayerTabOverlay": {
+        "renderPlayerlist": "Lbjq;a(ILbhk;Lbhg;)V",
+        "getPlayerName": "Lbjq;a(Lbsc;)Ljava/lang/String;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntityThrowable": {
+        "shoot(Lnet/minecraft/entity/Entity;FFFFF)V": "Laev;a(Lvg;FFFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderer": {
+        "Lnet/minecraft/client/renderer/entity/Render;renderOutlines:Z": "Lbzg;e:Z",
+        "doRender": "Lbzg;a(Lvg;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockCactus": {
+        "getCollisionBoundingBox": "Lape;a(Lawt;Lamy;Let;)Lbhb;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinFontRenderer": {
+        "Lnet/minecraft/client/gui/FontRenderer;renderString(Ljava/lang/String;FFIZ)I": "Lbip;b(Ljava/lang/String;FFIZ)I",
+        "Lnet/minecraft/client/gui/FontRenderer;drawString(Ljava/lang/String;FFIZ)I": "Lbip;a(Ljava/lang/String;FFIZ)I",
+        "drawString(Ljava/lang/String;FFIZ)I": "Lbip;a(Ljava/lang/String;FFIZ)I",
+        "drawStringWithShadow": "Lbip;a(Ljava/lang/String;FFI)I"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinLayerArmorBase": {
+        "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V": "Lbus;c(FFFF)V",
+        "renderEnchantedGlint": "Lcbp;a(Lcaa;Lvp;Lbqf;FFFFFFF)V",
+        "renderArmorLayer": "Lcbp;a(Lvp;FFFFFFFLvl;)V",
+        "net/minecraft/client/renderer/GlStateManager.color(FFFF)V": "Lbus;c(FFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinAbstractClientPlayer": {
+        "getLocationCape": "Lbua;q()Lnf;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockPortal": {
+        "randomDisplayTick": "Lass;a(Lawt;Lamu;Let;Ljava/util/Random;)V",
+        "Lnet/minecraft/world/World;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lamu;a(DDDLqe;Lqg;FFZ)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinItemPotion": {
+        "onItemUseFinish": "Lajd;a(Laip;Lamu;Lvp;)Laip;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderGlobal": {
+        "broadcastSound": "Lbuy;a(ILet;I)V",
+        "renderEntities": "Lbuy;a(Lvg;Lbxy;F)V",
+        "Lnet/minecraft/client/renderer/RenderGlobal;preRenderDamagedBlocks()V": "Lbuy;u()V",
+        "Lnet/minecraft/client/multiplayer/WorldClient;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lbsb;a(DDDLqe;Lqg;FFZ)V",
+        "Lnet/minecraft/client/multiplayer/WorldClient;playSound(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lbsb;a(Let;Lqe;Lqg;FFZ)V",
+        "playEvent": "Lbuy;a(Laed;ILet;I)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiNewChat": {
+        "drawChat": "Lbjb;a(I)V",
+        "Lnet/minecraft/client/gui/GuiNewChat;drawRect(IIIII)V": "Lbjb;a(IIIII)V",
+        "Lnet/minecraft/client/gui/FontRenderer;drawStringWithShadow(Ljava/lang/String;FFI)I": "Lbip;a(Ljava/lang/String;FFI)I"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinPlayerControllerMP": {
+        "clickBlock": "Lbsa;a(Let;Lfa;)Z",
+        "resetBlockRemoving": "Lbsa;c()V",
+        "onPlayerDamageBlock": "Lbsa;b(Let;Lfa;)Z",
+        "Lnet/minecraft/block/state/IBlockState;getPlayerRelativeBlockHardness(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)F": "Lawt;a(Laed;Lamu;Let;)F"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderLivingBase": {
+        "Lnet/minecraft/client/model/ModelBase;render(Lnet/minecraft/entity/Entity;FFFFFF)V": "Lbqf;a(Lvg;FFFFFF)V",
+        "renderLayers": "Lcaa;a(Lvp;FFFFFFF)V",
+        "renderModel": "Lcaa;a(Lvp;FFFFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinNetHandlerPlayClient": {
+        "Lnet/minecraft/client/multiplayer/WorldClient;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lbsb;a(DDDLqe;Lqg;FFZ)V",
+        "handleChunkData": "Lbrz;a(Lje;)V",
+        "Lnet/minecraft/world/chunk/Chunk;read(Lnet/minecraft/network/PacketBuffer;IZ)V": "Laxw;a(Lgy;IZ)V",
+        "handleEntityStatus": "Lbrz;a(Liz;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlock": {
+        "isFullCube": "Laow;c(Lawt;)Z",
+        "isOpaqueCube": "Laow;b(Lawt;)Z",
+        "shouldSideBeRendered": "Laow;a(Lawt;Lamy;Let;Lfa;)Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinModelRenderer": {
+        "Lnet/minecraft/client/renderer/GlStateManager;callList(I)V": "Lbus;s(I)V",
+        "render": "Lbrs;a(F)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderPlayer": {
+        "renderRightArm": "Lcct;b(Lbua;)V",
+        "Lnet/minecraft/client/model/ModelRenderer;render(F)V": "Lbrs;a(F)V",
+        "renderEntityName": "Lcct;a(Lbua;DDDLjava/lang/String;D)V",
+        "renderLeftArm": "Lcct;c(Lbua;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderEnderCrystal": {
+        "Lnet/minecraft/client/model/ModelBase;render(Lnet/minecraft/entity/Entity;FFFFFF)V": "Lbqf;a(Lvg;FFFFFF)V",
+        "doRender(Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V": "Lbzb;a(Labc;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntityPlayerSP": {
+        "move": "Lbud;a(Lvv;DDD)V",
+        "onLivingUpdate": "Lbud;n()V",
+        "notifyDataManagerChange": "Lbud;a(Lmy;)V",
+        "Lnet/minecraft/client/entity/EntityPlayerSP;closeScreen()V": "Lbud;p()V",
+        "onUpdateWalkingPlayer": "Lbud;N()V",
+        "swingArm": "Lbud;a(Lub;)V",
+        "onUpdate": "Lbud;B_()V",
+        "Lnet/minecraft/client/audio/SoundHandler;playSound(Lnet/minecraft/client/audio/ISound;)V": "Lcho;a(Lcgt;)V",
+        "Lnet/minecraft/client/Minecraft;displayGuiScreen(Lnet/minecraft/client/gui/GuiScreen;)V": "Lbib;a(Lblk;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockSoulSand": {
+        "onEntityCollision": "Latx;a(Lamu;Let;Lawt;Lvg;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinItemEnderPearl": {
+        "onItemRightClick": "Laib;a(Lamu;Laed;Lub;)Lue;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderLiving": {
+        "doRender": "Lcaf;a(Lvq;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderItem": {
+        "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V": "Lbus;c(FFFF)V",
+        "net/minecraft/client/renderer/RenderItem.renderModel(Lnet/minecraft/client/renderer/block/model/IBakedModel;I)V": "Lbzw;a(Lcfy;I)V",
+        "Lnet/minecraft/client/renderer/RenderItem;renderModel(Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/item/ItemStack;)V": "Lbzw;a(Lcfy;Laip;)V",
+        "renderItemModel": "Lbzw;a(Laip;Lcfy;Lbwc$b;Z)V",
+        "Lnet/minecraft/client/renderer/RenderItem;renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V": "Lbzw;a(Laip;Lcfy;)V",
+        "renderEffect": "Lbzw;a(Lcfy;)V",
+        "renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V": "Lbzw;a(Laip;Lcfy;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinModelPlayer": {
+        "setRotationAngles": "Lbqj;a(FFFFFFLvg;)V",
+        "render": "Lbqj;a(Lvg;FFFFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinMinecraft": {
+        "sendClickBlockToController": "Lbib;b(Z)V",
+        "Lnet/minecraft/client/Minecraft;displayCrashReport(Lnet/minecraft/crash/CrashReport;)V": "Lbib;c(Lb;)V",
+        "getLimitFramerate": "Lbib;k()I",
+        "runTickKeyboard": "Lbib;aD()V",
+        "middleClickMouse": "Lbib;aH()V",
+        "Lnet/minecraft/client/multiplayer/PlayerControllerMP;getIsHittingBlock()Z": "Lbsa;m()Z",
+        "run": "Lbib;a()V",
+        "shutdownMinecraftApplet": "Lbib;h()V",
+        "rightClickMouse": "Lbib;aB()V",
+        "Lnet/minecraft/client/entity/EntityPlayerSP;isHandActive()Z": "Lbud;cG()Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiChat": {
+        "Lnet/minecraft/client/gui/GuiChat;keyTyped(CI)V": "Lbkn;a(CI)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiIngame": {
+        "renderPotionEffects": "Lbiq;a(Lbit;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiMainMenu": {
+        "actionPerformed": "Lblr;a(Lbja;)V",
+        "Lnet/minecraft/client/gui/GuiMainMenu;renderSkybox(IIF)V": "Lblr;c(IIF)V",
+        "initGui": "Lblr;b()V",
+        "drawScreen": "Lblr;a(IIF)V",
+        "Lnet/minecraft/client/gui/GuiMainMenu;drawGradientRect(IIIIII)V": "Lblr;a(IIIIII)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinStateImplementation": {
+        "addCollisionBoxToList": "Lawu$a;a(Lamu;Let;Lbhb;Ljava/util/List;Lvg;Z)V",
+        "Lnet/minecraft/block/Block;addCollisionBoxToList(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;Z)V": "Laow;a(Lawt;Lamu;Let;Lbhb;Ljava/util/List;Lvg;Z)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockModelRenderer": {
+        "renderModel(Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/renderer/BufferBuilder;ZJ)Z": "Lbvo;a(Lamy;Lcfy;Lawt;Let;Lbuk;ZJ)Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinTileEntityRenderDispatcher": {
+        "render(Lnet/minecraft/tileentity/TileEntity;DDDFIF)V": "Lbwx;a(Lavj;DDDFIF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinContainerPlayer": {
+        "onContainerClosed": "Lagi;b(Laed;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinNetworkManager": {
+        "sendPacket(Lnet/minecraft/network/Packet;)V": "Lgw;a(Lht;)V",
+        "channelRead0": "Lgw;a(Lio/netty/channel/ChannelHandlerContext;Lht;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntityRenderer": {
+        "hurtCameraEffect": "Lbuq;d(F)V",
+        "Lnet/minecraft/client/multiplayer/WorldClient;getEntitiesInAABBexcluding(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Lcom/google/common/base/Predicate;)Ljava/util/List;": "Lbsb;a(Lvg;Lbhb;Lcom/google/common/base/Predicate;)Ljava/util/List;",
+        "Lnet/minecraft/client/multiplayer/WorldClient;rayTraceBlocks(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/RayTraceResult;": "Lbsb;a(Lbhe;Lbhe;)Lbhc;",
+        "orientCamera": "Lbuq;f(F)V",
+        "getMouseOver": "Lbuq;a(F)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockWeb": {
+        "getCollisionBoundingBox": "Lauz;a(Lawt;Lamy;Let;)Lbhb;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiScreen": {
+        "renderToolTip": "Lblk;a(Laip;II)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinC00Handshake": {
+        "writePacketData": "Lmd;b(Lgy;)V"
+      }
+    },
+    "searge": {
+      "com/elementars/eclient/mixin/mixins/MixinRenderEntityItem": {
+        "doRender": "Lnet/minecraft/client/renderer/entity/RenderEntityItem;func_76986_a(Lnet/minecraft/entity/item/EntityItem;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntity": {
+        "applyEntityCollision": "Lnet/minecraft/entity/Entity;func_70108_f(Lnet/minecraft/entity/Entity;)V",
+        "Lnet/minecraft/entity/Entity;addVelocity(DDD)V": "Lnet/minecraft/entity/Entity;func_70024_g(DDD)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockLiquid": {
+        "getCollisionBoundingBox": "Lnet/minecraft/block/BlockLiquid;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;",
+        "modifyAcceleration": "Lnet/minecraft/block/BlockLiquid;func_176197_a(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/Vec3d;",
+        "canCollideCheck": "Lnet/minecraft/block/BlockLiquid;func_176209_a(Lnet/minecraft/block/state/IBlockState;Z)Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockFire": {
+        "getCollisionBoundingBox": "Lnet/minecraft/block/BlockFire;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiPlayerTabOverlay": {
+        "renderPlayerlist": "Lnet/minecraft/client/gui/GuiPlayerTabOverlay;func_175249_a(ILnet/minecraft/scoreboard/Scoreboard;Lnet/minecraft/scoreboard/ScoreObjective;)V",
+        "getPlayerName": "Lnet/minecraft/client/gui/GuiPlayerTabOverlay;func_175243_a(Lnet/minecraft/client/network/NetworkPlayerInfo;)Ljava/lang/String;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntityThrowable": {
+        "shoot(Lnet/minecraft/entity/Entity;FFFFF)V": "Lnet/minecraft/entity/projectile/EntityThrowable;func_184538_a(Lnet/minecraft/entity/Entity;FFFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderer": {
+        "Lnet/minecraft/client/renderer/entity/Render;renderOutlines:Z": "Lnet/minecraft/client/renderer/entity/Render;field_188301_f:Z",
+        "doRender": "Lnet/minecraft/client/renderer/entity/Render;func_76986_a(Lnet/minecraft/entity/Entity;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockCactus": {
+        "getCollisionBoundingBox": "Lnet/minecraft/block/BlockCactus;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinFontRenderer": {
+        "Lnet/minecraft/client/gui/FontRenderer;renderString(Ljava/lang/String;FFIZ)I": "Lnet/minecraft/client/gui/FontRenderer;func_180455_b(Ljava/lang/String;FFIZ)I",
+        "Lnet/minecraft/client/gui/FontRenderer;drawString(Ljava/lang/String;FFIZ)I": "Lnet/minecraft/client/gui/FontRenderer;func_175065_a(Ljava/lang/String;FFIZ)I",
+        "drawString(Ljava/lang/String;FFIZ)I": "Lnet/minecraft/client/gui/FontRenderer;func_175065_a(Ljava/lang/String;FFIZ)I",
+        "drawStringWithShadow": "Lnet/minecraft/client/gui/FontRenderer;func_175063_a(Ljava/lang/String;FFI)I"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinLayerArmorBase": {
+        "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179131_c(FFFF)V",
+        "renderEnchantedGlint": "Lnet/minecraft/client/renderer/entity/layers/LayerArmorBase;func_188364_a(Lnet/minecraft/client/renderer/entity/RenderLivingBase;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/client/model/ModelBase;FFFFFFF)V",
+        "renderArmorLayer": "Lnet/minecraft/client/renderer/entity/layers/LayerArmorBase;func_188361_a(Lnet/minecraft/entity/EntityLivingBase;FFFFFFFLnet/minecraft/inventory/EntityEquipmentSlot;)V",
+        "net/minecraft/client/renderer/GlStateManager.color(FFFF)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179131_c(FFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinAbstractClientPlayer": {
+        "getLocationCape": "Lnet/minecraft/client/entity/AbstractClientPlayer;func_110303_q()Lnet/minecraft/util/ResourceLocation;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockPortal": {
+        "randomDisplayTick": "Lnet/minecraft/block/BlockPortal;func_180655_c(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V",
+        "Lnet/minecraft/world/World;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/world/World;func_184134_a(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinItemPotion": {
+        "onItemUseFinish": "Lnet/minecraft/item/ItemPotion;func_77654_b(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderGlobal": {
+        "broadcastSound": "Lnet/minecraft/client/renderer/RenderGlobal;func_180440_a(ILnet/minecraft/util/math/BlockPos;I)V",
+        "renderEntities": "Lnet/minecraft/client/renderer/RenderGlobal;func_180446_a(Lnet/minecraft/entity/Entity;Lnet/minecraft/client/renderer/culling/ICamera;F)V",
+        "Lnet/minecraft/client/renderer/RenderGlobal;preRenderDamagedBlocks()V": "Lnet/minecraft/client/renderer/RenderGlobal;func_180443_s()V",
+        "Lnet/minecraft/client/multiplayer/WorldClient;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/client/multiplayer/WorldClient;func_184134_a(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V",
+        "Lnet/minecraft/client/multiplayer/WorldClient;playSound(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/client/multiplayer/WorldClient;func_184156_a(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V",
+        "playEvent": "Lnet/minecraft/client/renderer/RenderGlobal;func_180439_a(Lnet/minecraft/entity/player/EntityPlayer;ILnet/minecraft/util/math/BlockPos;I)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiNewChat": {
+        "drawChat": "Lnet/minecraft/client/gui/GuiNewChat;func_146230_a(I)V",
+        "Lnet/minecraft/client/gui/GuiNewChat;drawRect(IIIII)V": "Lnet/minecraft/client/gui/GuiNewChat;func_73734_a(IIIII)V",
+        "Lnet/minecraft/client/gui/FontRenderer;drawStringWithShadow(Ljava/lang/String;FFI)I": "Lnet/minecraft/client/gui/FontRenderer;func_175063_a(Ljava/lang/String;FFI)I"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinPlayerControllerMP": {
+        "clickBlock": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_180511_b(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;)Z",
+        "resetBlockRemoving": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_78767_c()V",
+        "onPlayerDamageBlock": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_180512_c(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;)Z",
+        "Lnet/minecraft/block/state/IBlockState;getPlayerRelativeBlockHardness(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)F": "Lnet/minecraft/block/state/IBlockState;func_185903_a(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)F"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderLivingBase": {
+        "Lnet/minecraft/client/model/ModelBase;render(Lnet/minecraft/entity/Entity;FFFFFF)V": "Lnet/minecraft/client/model/ModelBase;func_78088_a(Lnet/minecraft/entity/Entity;FFFFFF)V",
+        "renderLayers": "Lnet/minecraft/client/renderer/entity/RenderLivingBase;func_177093_a(Lnet/minecraft/entity/EntityLivingBase;FFFFFFF)V",
+        "renderModel": "Lnet/minecraft/client/renderer/entity/RenderLivingBase;func_77036_a(Lnet/minecraft/entity/EntityLivingBase;FFFFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinNetHandlerPlayClient": {
+        "Lnet/minecraft/client/multiplayer/WorldClient;playSound(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V": "Lnet/minecraft/client/multiplayer/WorldClient;func_184134_a(DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FFZ)V",
+        "handleChunkData": "Lnet/minecraft/client/network/NetHandlerPlayClient;func_147263_a(Lnet/minecraft/network/play/server/SPacketChunkData;)V",
+        "Lnet/minecraft/world/chunk/Chunk;read(Lnet/minecraft/network/PacketBuffer;IZ)V": "Lnet/minecraft/world/chunk/Chunk;func_186033_a(Lnet/minecraft/network/PacketBuffer;IZ)V",
+        "handleEntityStatus": "Lnet/minecraft/client/network/NetHandlerPlayClient;func_147236_a(Lnet/minecraft/network/play/server/SPacketEntityStatus;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlock": {
+        "isFullCube": "Lnet/minecraft/block/Block;func_149686_d(Lnet/minecraft/block/state/IBlockState;)Z",
+        "isOpaqueCube": "Lnet/minecraft/block/Block;func_149662_c(Lnet/minecraft/block/state/IBlockState;)Z",
+        "shouldSideBeRendered": "Lnet/minecraft/block/Block;func_176225_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;)Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinModelRenderer": {
+        "Lnet/minecraft/client/renderer/GlStateManager;callList(I)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179148_o(I)V",
+        "render": "Lnet/minecraft/client/model/ModelRenderer;func_78785_a(F)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderPlayer": {
+        "renderRightArm": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_177138_b(Lnet/minecraft/client/entity/AbstractClientPlayer;)V",
+        "Lnet/minecraft/client/model/ModelRenderer;render(F)V": "Lnet/minecraft/client/model/ModelRenderer;func_78785_a(F)V",
+        "renderEntityName": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_188296_a(Lnet/minecraft/client/entity/AbstractClientPlayer;DDDLjava/lang/String;D)V",
+        "renderLeftArm": "Lnet/minecraft/client/renderer/entity/RenderPlayer;func_177139_c(Lnet/minecraft/client/entity/AbstractClientPlayer;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderEnderCrystal": {
+        "Lnet/minecraft/client/model/ModelBase;render(Lnet/minecraft/entity/Entity;FFFFFF)V": "Lnet/minecraft/client/model/ModelBase;func_78088_a(Lnet/minecraft/entity/Entity;FFFFFF)V",
+        "doRender(Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V": "Lnet/minecraft/client/renderer/entity/RenderEnderCrystal;func_76986_a(Lnet/minecraft/entity/item/EntityEnderCrystal;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntityPlayerSP": {
+        "move": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70091_d(Lnet/minecraft/entity/MoverType;DDD)V",
+        "onLivingUpdate": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70636_d()V",
+        "notifyDataManagerChange": "Lnet/minecraft/client/entity/EntityPlayerSP;func_184206_a(Lnet/minecraft/network/datasync/DataParameter;)V",
+        "Lnet/minecraft/client/entity/EntityPlayerSP;closeScreen()V": "Lnet/minecraft/client/entity/EntityPlayerSP;func_71053_j()V",
+        "onUpdateWalkingPlayer": "Lnet/minecraft/client/entity/EntityPlayerSP;func_175161_p()V",
+        "swingArm": "Lnet/minecraft/client/entity/EntityPlayerSP;func_184609_a(Lnet/minecraft/util/EnumHand;)V",
+        "onUpdate": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70071_h_()V",
+        "Lnet/minecraft/client/audio/SoundHandler;playSound(Lnet/minecraft/client/audio/ISound;)V": "Lnet/minecraft/client/audio/SoundHandler;func_147682_a(Lnet/minecraft/client/audio/ISound;)V",
+        "Lnet/minecraft/client/Minecraft;displayGuiScreen(Lnet/minecraft/client/gui/GuiScreen;)V": "Lnet/minecraft/client/Minecraft;func_147108_a(Lnet/minecraft/client/gui/GuiScreen;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockSoulSand": {
+        "onEntityCollision": "Lnet/minecraft/block/BlockSoulSand;func_180634_a(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/entity/Entity;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinItemEnderPearl": {
+        "onItemRightClick": "Lnet/minecraft/item/ItemEnderPearl;func_77659_a(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderLiving": {
+        "doRender": "Lnet/minecraft/client/renderer/entity/RenderLiving;func_76986_a(Lnet/minecraft/entity/EntityLiving;DDDFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinRenderItem": {
+        "Lnet/minecraft/client/renderer/GlStateManager;color(FFFF)V": "Lnet/minecraft/client/renderer/GlStateManager;func_179131_c(FFFF)V",
+        "net/minecraft/client/renderer/RenderItem.renderModel(Lnet/minecraft/client/renderer/block/model/IBakedModel;I)V": "Lnet/minecraft/client/renderer/RenderItem;func_191965_a(Lnet/minecraft/client/renderer/block/model/IBakedModel;I)V",
+        "Lnet/minecraft/client/renderer/RenderItem;renderModel(Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/item/ItemStack;)V": "Lnet/minecraft/client/renderer/RenderItem;func_191961_a(Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/item/ItemStack;)V",
+        "renderItemModel": "Lnet/minecraft/client/renderer/RenderItem;func_184394_a(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms$TransformType;Z)V",
+        "Lnet/minecraft/client/renderer/RenderItem;renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V": "Lnet/minecraft/client/renderer/RenderItem;func_180454_a(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V",
+        "renderEffect": "Lnet/minecraft/client/renderer/RenderItem;func_191966_a(Lnet/minecraft/client/renderer/block/model/IBakedModel;)V",
+        "renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V": "Lnet/minecraft/client/renderer/RenderItem;func_180454_a(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinModelPlayer": {
+        "setRotationAngles": "Lnet/minecraft/client/model/ModelPlayer;func_78087_a(FFFFFFLnet/minecraft/entity/Entity;)V",
+        "render": "Lnet/minecraft/client/model/ModelPlayer;func_78088_a(Lnet/minecraft/entity/Entity;FFFFFF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinMinecraft": {
+        "sendClickBlockToController": "Lnet/minecraft/client/Minecraft;func_147115_a(Z)V",
+        "Lnet/minecraft/client/Minecraft;displayCrashReport(Lnet/minecraft/crash/CrashReport;)V": "Lnet/minecraft/client/Minecraft;func_71377_b(Lnet/minecraft/crash/CrashReport;)V",
+        "getLimitFramerate": "Lnet/minecraft/client/Minecraft;func_90020_K()I",
+        "runTickKeyboard": "Lnet/minecraft/client/Minecraft;func_184118_az()V",
+        "middleClickMouse": "Lnet/minecraft/client/Minecraft;func_147112_ai()V",
+        "Lnet/minecraft/client/multiplayer/PlayerControllerMP;getIsHittingBlock()Z": "Lnet/minecraft/client/multiplayer/PlayerControllerMP;func_181040_m()Z",
+        "run": "Lnet/minecraft/client/Minecraft;func_99999_d()V",
+        "shutdownMinecraftApplet": "Lnet/minecraft/client/Minecraft;func_71405_e()V",
+        "rightClickMouse": "Lnet/minecraft/client/Minecraft;func_147121_ag()V",
+        "Lnet/minecraft/client/entity/EntityPlayerSP;isHandActive()Z": "Lnet/minecraft/client/entity/EntityPlayerSP;func_184587_cr()Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiChat": {
+        "Lnet/minecraft/client/gui/GuiChat;keyTyped(CI)V": "Lnet/minecraft/client/gui/GuiChat;func_73869_a(CI)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiIngame": {
+        "renderPotionEffects": "Lnet/minecraft/client/gui/GuiIngame;func_184048_a(Lnet/minecraft/client/gui/ScaledResolution;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiMainMenu": {
+        "actionPerformed": "Lnet/minecraft/client/gui/GuiMainMenu;func_146284_a(Lnet/minecraft/client/gui/GuiButton;)V",
+        "Lnet/minecraft/client/gui/GuiMainMenu;renderSkybox(IIF)V": "Lnet/minecraft/client/gui/GuiMainMenu;func_73971_c(IIF)V",
+        "initGui": "Lnet/minecraft/client/gui/GuiMainMenu;func_73866_w_()V",
+        "drawScreen": "Lnet/minecraft/client/gui/GuiMainMenu;func_73863_a(IIF)V",
+        "Lnet/minecraft/client/gui/GuiMainMenu;drawGradientRect(IIIIII)V": "Lnet/minecraft/client/gui/GuiMainMenu;func_73733_a(IIIIII)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinStateImplementation": {
+        "addCollisionBoxToList": "Lnet/minecraft/block/state/BlockStateContainer$StateImplementation;func_185908_a(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;Z)V",
+        "Lnet/minecraft/block/Block;addCollisionBoxToList(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;Z)V": "Lnet/minecraft/block/Block;func_185477_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;Z)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockModelRenderer": {
+        "renderModel(Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/renderer/BufferBuilder;ZJ)Z": "Lnet/minecraft/client/renderer/BlockModelRenderer;func_187493_a(Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/client/renderer/block/model/IBakedModel;Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/renderer/BufferBuilder;ZJ)Z"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinTileEntityRenderDispatcher": {
+        "render(Lnet/minecraft/tileentity/TileEntity;DDDFIF)V": "Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;func_192854_a(Lnet/minecraft/tileentity/TileEntity;DDDFIF)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinContainerPlayer": {
+        "onContainerClosed": "Lnet/minecraft/inventory/ContainerPlayer;func_75134_a(Lnet/minecraft/entity/player/EntityPlayer;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinNetworkManager": {
+        "sendPacket(Lnet/minecraft/network/Packet;)V": "Lnet/minecraft/network/NetworkManager;func_179290_a(Lnet/minecraft/network/Packet;)V",
+        "channelRead0": "Lnet/minecraft/network/NetworkManager;channelRead0(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinEntityRenderer": {
+        "hurtCameraEffect": "Lnet/minecraft/client/renderer/EntityRenderer;func_78482_e(F)V",
+        "Lnet/minecraft/client/multiplayer/WorldClient;getEntitiesInAABBexcluding(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Lcom/google/common/base/Predicate;)Ljava/util/List;": "Lnet/minecraft/client/multiplayer/WorldClient;func_175674_a(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Lcom/google/common/base/Predicate;)Ljava/util/List;",
+        "Lnet/minecraft/client/multiplayer/WorldClient;rayTraceBlocks(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/RayTraceResult;": "Lnet/minecraft/client/multiplayer/WorldClient;func_72933_a(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/RayTraceResult;",
+        "orientCamera": "Lnet/minecraft/client/renderer/EntityRenderer;func_78467_g(F)V",
+        "getMouseOver": "Lnet/minecraft/client/renderer/EntityRenderer;func_78473_a(F)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinBlockWeb": {
+        "getCollisionBoundingBox": "Lnet/minecraft/block/BlockWeb;func_180646_a(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/AxisAlignedBB;"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinGuiScreen": {
+        "renderToolTip": "Lnet/minecraft/client/gui/GuiScreen;func_146285_a(Lnet/minecraft/item/ItemStack;II)V"
+      },
+      "com/elementars/eclient/mixin/mixins/MixinC00Handshake": {
+        "writePacketData": "Lnet/minecraft/network/handshake/client/C00Handshake;func_148840_b(Lnet/minecraft/network/PacketBuffer;)V"
+      }
+    }
+  }
+}
